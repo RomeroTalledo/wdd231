@@ -1,13 +1,15 @@
-@media only screen and (min-width: 38rem){
-    header,main,nav,footer{
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    header{
-        grid-template-columns: 24px auto;
-    }
-    .hamburger{
+@media only screen and (min-width: 38rem) {
+  header,
+  main,
+  nav,
+  footer {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  header {
+    grid-template-columns: 24px auto;
+  }
+  .hamburger {
     display: none;
-}
-
+  }
 }

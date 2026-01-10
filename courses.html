@@ -5,70 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="WDD 231: Web Frontend Development I - Dallin Romero Talledo"
+      content="WDD 231: Web Frontend Development I - Course Home Page"
     />
     <meta name="author" content="Dallin Romero Talledo" />
-    <title>WDD 231: Web Frontend Development I - Dallin Romero Talledo</title>
+    <title>WDD 231: Web Frontend Development I</title>
 
+    <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/courses.css" />
+    <link rel="stylesheet" href="styles/large.css" />
   </head>
 
   <body>
+    <!-- HEADER -->
     <header>
       <h1>WDD 231: Web Frontend Development I</h1>
       <p>Dallin Romero Talledo</p>
+      <button id="ham-btn" class="hamburger" aria-label="Open navigation menu">☰</button>
     </header>
 
+    <!-- NAVIGATION -->
     <nav>
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/dallin-e-romero/" target="_blank"
-            >LinkedIn</a
-          >
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-        </li>
-        <li>
-          <a
-            href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng"
-            target="_blank"
-            >Scripture</a
-          >
+          <a href="#">Chamber Project</a>
         </li>
         <li><a href="#">Final Project</a></li>
       </ul>
     </nav>
 
-    <main>
-      <section class="about-me">
-        <h2>About Me</h2>
+    <!-- MAIN CONTENT -->
+    <main class="home-grid">
+      <!-- LEFT COLUMN -->
+      <section class="course-work">
+        <h2>Course Work</h2>
+
         <p>
-          My name is Dallin Romero Talledo. I live in Lima, Peru. I am passionate
-          about technology and programming and enjoy learning new web
-          development skills.
+          My name is Dallin Romero Talledo. I live in Lima, Peru. I am
+          passionate about technology and programming and enjoy learning modern
+          web development skills.
         </p>
-        <img src="images/my-picture.jpg" alt="Profile picture of Dallin Romero" />
-      </section>
 
-      <section class="location">
-        <h2>Peru</h2>
-        <div class="location-info">
-          <img src="images/peru-flag.png" alt="Flag of Peru" />
-          <p>
-            Peru is a country in South America known for its rich history,
-            diverse geography, and world-renowned cuisine. Lima, the capital
-            city, blends tradition with modern life.
-          </p>
-        </div>
-      </section>
+        <h3>Location</h3>
+        <p>Peru, South America</p>
 
-      <section class="resources">
-        <h2>Web Dev Resources</h2>
+        <h3>Web Dev Resources</h3>
         <ul>
           <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
           <li>
-            <a href="https://github.com/RomeroTalledo" target="_blank">GitHub</a>
+            <a href="https://github.com/RomeroTalledo" target="_blank"
+              >GitHub</a
+            >
           </li>
           <li>
             <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
@@ -76,7 +65,13 @@
           <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
         </ul>
       </section>
+<!-- RIGHT COLUMN -->
+      <section class="course-work">
+        <h2>My picture</h2>
+        <img src="images/my-newpicture.jpg" alt="Profile Picture" />
+      </section>
 
+      
       <section class="courses">
         <h2>Courses</h2>
 
@@ -95,19 +90,13 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      <p>
-        &copy; <span id="currentyear"></span> Dallin Romero Talledo • Lima, Peru
-      </p>
+      <p>&copy; <span id="currentyear"></span> Dallin Romero Talledo</p>
       <p id="lastModified"></p>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="scripts/courses.js"></script>
-    <script>
-      document.querySelector("#currentyear").textContent =
-        new Date().getFullYear();
-      document.querySelector("#lastModified").textContent =
-        "Last Modified: " + document.lastModified;
-    </script>
   </body>
 </html>

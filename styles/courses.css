@@ -1,28 +1,35 @@
+:root {
+  --principal-color: #304966;
+  --secondary-color: #588581;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
+/* HEADER */
 header {
-  background-color: #002855;
+  background-color: var(--principal-color);
   color: white;
   text-align: center;
   padding: 1.5rem;
 }
 
+/* NAV */
 nav {
-  background-color: #2e7c86;
+  background-color: var(--secondary-color);
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -41,42 +48,40 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* MAIN – MOBILE FIRST */
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
+/* SECTIONS */
 section {
   background-color: white;
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  max-width: 320px;
-  flex: 1;
 }
 
 section h2 {
-  background-color: #2e7c86;
+  background-color: var(--secondary-color);
   color: white;
   padding: 0.5rem;
   border-radius: 5px;
   margin-top: 0;
 }
 
-img {
+.course-work h3 {
+  margin-top: 1rem;
+}
+
+.course-work img {
   max-width: 100%;
-  border-radius: 10px;
+  height: auto;
 }
 
-.location-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* COURSES */
 .course-buttons {
   display: flex;
   justify-content: center;
@@ -87,7 +92,7 @@ img {
 .course-buttons button {
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #2e7c86;
+  background-color: var(--principal-color);
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -105,10 +110,60 @@ img {
 .courses li {
   padding: 0.3rem 0;
 }
+/* HAMBURGER BUTTON */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: block; /* visible en móvil */
+}
 
+/* MOBILE NAV */
+nav {
+  display: none;
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* FOOTER */
 footer {
   background-color: #002855;
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  .hamburger {
+    display: none; /* 🔥 ocultar botón */
+  }
+
+  nav {
+    display: block; /* 🔥 mostrar menú normal */
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  .courses {
+    grid-column: 1 / -1; 
+  }
 }
