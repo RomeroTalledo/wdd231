@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #002855;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+nav {
+  background-color: #2e7c86;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 320px;
+  flex: 1;
+}
+
+section h2 {
+  background-color: #2e7c86;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #2e7c86;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course-buttons button:hover {
+  background-color: #1f5c63;
+}
+
+.courses ul {
+  list-style: none;
+  padding: 0;
+}
+
+.courses li {
+  padding: 0.3rem 0;
+}
+
+footer {
+  background-color: #002855;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
