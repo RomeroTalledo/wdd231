@@ -53,6 +53,15 @@
       "image": "viajesinka.webp",
       "membershipLevel": "Gold",
       "description": "Agencia de viajes especializada en turismo cultural y de aventura."
+    },
+    {
+      "name": "Fitness Pro Gym",
+      "address": "Calle Salud 222, Lima, Perú",
+      "phone": "+51 978 456 123",
+      "website": "https://fitnesspro.pe",
+      "image": "fitnesspro.webp",
+      "membershipLevel": "Bronze",
+      "description": "Gimnasio moderno con entrenadores certificados y planes personalizados."
     }
   ]
 }
