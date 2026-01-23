@@ -2,66 +2,66 @@
   "members": [
     {
       "name": "La Perla Store",
-      "address": "Av. Principal 123, Lima, Perú",
+      "address": "123 Main Avenue, Lima, Peru",
       "phone": "+51 987 654 321",
       "website": "https://laperla.com.pe",
       "image": "laperla.webp",
       "membershipLevel": "Gold",
-      "description": "Tienda local especializada en productos artesanales y regalos."
+      "description": "Local store specialized in handcrafted products and gifts."
     },
     {
       "name": "TechNova Solutions",
-      "address": "Calle Innovación 456, Lima, Perú",
+      "address": "456 Innovation Street, Lima, Peru",
       "phone": "+51 912 345 678",
       "website": "https://technova.pe",
       "image": "technova.webp",
       "membershipLevel": "Silver",
-      "description": "Empresa de soluciones tecnológicas para pequeñas y medianas empresas."
+      "description": "Technology solutions company for small and medium-sized businesses."
     },
     {
       "name": "Green Life Market",
-      "address": "Jr. Naturaleza 789, Lima, Perú",
+      "address": "789 Nature Road, Lima, Peru",
       "phone": "+51 934 567 890",
       "website": "https://greenlife.pe",
       "image": "greenlife.webp",
       "membershipLevel": "Bronze",
-      "description": "Mercado ecológico con productos orgánicos y saludables."
+      "description": "Eco-friendly market offering organic and healthy products."
     },
     {
-      "name": "Constructora Andina",
-      "address": "Av. Los Andes 321, Lima, Perú",
+      "name": "Andina Construction",
+      "address": "321 Andes Avenue, Lima, Peru",
       "phone": "+51 901 234 567",
       "website": "https://andina.com.pe",
       "image": "andina.webp",
       "membershipLevel": "Gold",
-      "description": "Empresa dedicada a proyectos de construcción y desarrollo urbano."
+      "description": "Company dedicated to construction projects and urban development."
     },
     {
-      "name": "Café Aroma",
-      "address": "Plaza Central 15, Lima, Perú",
+      "name": "Aroma Café",
+      "address": "15 Central Plaza, Lima, Peru",
       "phone": "+51 956 321 654",
       "website": "https://cafearoma.pe",
       "image": "cafearoma.webp",
       "membershipLevel": "Silver",
-      "description": "Cafetería artesanal con granos de café 100% peruanos."
+      "description": "Artisan coffee shop featuring 100% Peruvian coffee beans."
     },
     {
-      "name": "Viajes Inka",
-      "address": "Av. Turismo 852, Cusco, Perú",
+      "name": "Inka Travels",
+      "address": "852 Tourism Avenue, Cusco, Peru",
       "phone": "+51 945 852 963",
       "website": "https://viajesinka.pe",
       "image": "viajesinka.webp",
       "membershipLevel": "Gold",
-      "description": "Agencia de viajes especializada en turismo cultural y de aventura."
+      "description": "Travel agency specialized in cultural and adventure tourism."
     },
     {
       "name": "Fitness Pro Gym",
-      "address": "Calle Salud 222, Lima, Perú",
+      "address": "222 Health Street, Lima, Peru",
       "phone": "+51 978 456 123",
       "website": "https://fitnesspro.pe",
       "image": "fitnesspro.webp",
       "membershipLevel": "Bronze",
-      "description": "Gimnasio moderno con entrenadores certificados y planes personalizados."
+      "description": "Modern gym with certified trainers and personalized plans."
     }
   ]
 }
