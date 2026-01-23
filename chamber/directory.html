@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Directory" />
+    <meta name="author" content="Dallin Romero Talledo" />
+    <title>Directory - Chamber of Commerce</title>
+    <meta property="og:title" content="Dallin Romero - Backend Programer" />
+    <meta
+      property="og:description"
+      content="Business Directory of the La Perla Chamber of Commerce featuring local companies and member organizations."
+    />
+    <meta property="og:image" content="./images/icon.png" />
+    <meta
+      property="og:url"
+      content="https://romerotalledo.github.io/wdd231/chamber/directory.html"
+    />
+    <meta property="og:url" content="https://romerotalledo.github.io/wdd231/" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-class">
+        <img
+          src="images/houses-fill.svg"
+          alt="Company Icon"
+          width="100"
+          height="100"
+        />
+        <span>Chamber of Commerce - La Perla</span>
+      </div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">DIRECTORY</a></li>
+          <li><a href="#">JOIN</a></li>
+          <li><a href="#">DISCOVER</a></li>
+        </ul>
+      </nav>
+      <button id="ham-btn" class="hamburger"></button>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- DASHBOARD -->
+        <div class="medium">
+          <section>
+            <h2>Events</h2>
+          </section>
+
+          <section>
+            <h2>Current Weather</h2>
+            <p id="temp"></p>
+            <p id="desc"></p>
+            <p id="high"></p>
+            <p id="low"></p>
+            <p id="humidity"></p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+          </section>
+
+          <section>
+            <h2>Weather Forecast</h2>
+            <p id="today"></p>
+            <p id="tomorrow"></p>
+            <p id="day2"></p>
+          </section>
+        </div>
+
+        <!-- DIRECTORY -->
+        <div id="cards"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Dallin Romero Talledo</p>
+      <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/directory.js"></script>
+  </body>
+</html>

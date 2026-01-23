@@ -1,0 +1,58 @@
+{
+  "members": [
+    {
+      "name": "La Perla Store",
+      "address": "Av. Principal 123, Lima, Perú",
+      "phone": "+51 987 654 321",
+      "website": "https://laperla.com.pe",
+      "image": "laperla.webp",
+      "membershipLevel": "Gold",
+      "description": "Tienda local especializada en productos artesanales y regalos."
+    },
+    {
+      "name": "TechNova Solutions",
+      "address": "Calle Innovación 456, Lima, Perú",
+      "phone": "+51 912 345 678",
+      "website": "https://technova.pe",
+      "image": "technova.webp",
+      "membershipLevel": "Silver",
+      "description": "Empresa de soluciones tecnológicas para pequeñas y medianas empresas."
+    },
+    {
+      "name": "Green Life Market",
+      "address": "Jr. Naturaleza 789, Lima, Perú",
+      "phone": "+51 934 567 890",
+      "website": "https://greenlife.pe",
+      "image": "greenlife.webp",
+      "membershipLevel": "Bronze",
+      "description": "Mercado ecológico con productos orgánicos y saludables."
+    },
+    {
+      "name": "Constructora Andina",
+      "address": "Av. Los Andes 321, Lima, Perú",
+      "phone": "+51 901 234 567",
+      "website": "https://andina.com.pe",
+      "image": "andina.webp",
+      "membershipLevel": "Gold",
+      "description": "Empresa dedicada a proyectos de construcción y desarrollo urbano."
+    },
+    {
+      "name": "Café Aroma",
+      "address": "Plaza Central 15, Lima, Perú",
+      "phone": "+51 956 321 654",
+      "website": "https://cafearoma.pe",
+      "image": "cafearoma.webp",
+      "membershipLevel": "Silver",
+      "description": "Cafetería artesanal con granos de café 100% peruanos."
+    },
+    {
+      "name": "Viajes Inka",
+      "address": "Av. Turismo 852, Cusco, Perú",
+      "phone": "+51 945 852 963",
+      "website": "https://viajesinka.pe",
+      "image": "viajesinka.webp",
+      "membershipLevel": "Gold",
+      "description": "Agencia de viajes especializada en turismo cultural y de aventura."
+    }
+  ]
+}
