@@ -15,16 +15,19 @@ const weatherData = {
   }
 };
 
-// Mostrar clima actual
-document.getElementById("temp").textContent = `Temp: ${weatherData.current.temp}°F`;
-document.getElementById("desc").textContent = `Sky: ${weatherData.current.desc}`;
-document.getElementById("high").textContent = `High: ${weatherData.current.high}°F`;
-document.getElementById("low").textContent = `Low: ${weatherData.current.low}°F`;
-document.getElementById("humidity").textContent = `Humidity: ${weatherData.current.humidity}%`;
-document.getElementById("sunrise").textContent = `Sunrise: ${weatherData.current.sunrise}`;
-document.getElementById("sunset").textContent = `Sunset: ${weatherData.current.sunset}`;
+function setText(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text;
+}
 
-// Mostrar pronóstico
-document.getElementById("today").textContent = weatherData.forecast.today;
-document.getElementById("tomorrow").textContent = weatherData.forecast.tomorrow;
-document.getElementById("day2").textContent = weatherData.forecast.day2;
+setText("temp", `Temp: ${weatherData.current.temp}°F`);
+setText("desc", `Sky: ${weatherData.current.desc}`);
+setText("high", `High: ${weatherData.current.high}°F`);
+setText("low", `Low: ${weatherData.current.low}°F`);
+setText("humidity", `Humidity: ${weatherData.current.humidity}%`);
+setText("sunrise", `Sunrise: ${weatherData.current.sunrise}`);
+setText("sunset", `Sunset: ${weatherData.current.sunset}`);
+
+setText("today", weatherData.forecast.today);
+setText("tomorrow", weatherData.forecast.tomorrow);
+setText("day2", weatherData.forecast.day2);
