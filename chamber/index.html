@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chamber of Commerce - La Perla</title>
+
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="icon" href="images/icon.png" />
+
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/lastmodified.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo">
+          <img src="images/houses-fill.svg" alt="Logo" />
+          <span>Chamber of Commerce - La Perla</span>
+        </div>
+
+        <button id="ham-btn" class="hamburger">&#9776;</button>
+
+        <nav id="nav-menu" class="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- DASHBOARD -->
+      <section class="medium">
+        <section>
+          <h2>Welcome to La Perla</h2>
+          <p>
+            La Perla Chamber of Commerce supports local businesses, promotes
+            economic growth, and strengthens our community.
+          </p>
+          <button class="cta">Join the Chamber</button>
+        </section>
+
+        <section>
+          <h2>Upcoming Events</h2>
+          <ul class="events">
+            <li>📅 Business Networking Night – Feb 15</li>
+            <li>📅 Community Fair – Mar 3</li>
+            <li>📅 Entrepreneur Workshop – Mar 18</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Current Weather</h2>
+          <p id="temp">Temp: --</p>
+          <p id="desc">Sky: --</p>
+          <p id="humidity">Humidity: --</p>
+          <p id="sunrise">Sunrise: --</p>
+          <p id="sunset">Sunset: --</p>
+        </section>
+      </section>
+
+      <!-- CAROUSEL -->
+      <section class="carousel-section">
+        <h2>Featured Businesses</h2>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-btn" id="prevBtn">&#10094;</button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack">
+              <!-- cards creadas por JS -->
+            </div>
+          </div>
+
+          <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p>© 2026 Dallin Romero Talledo</p>
+        <p id="lastModified"></p>
+      </div>
+
+      <div class="social">
+        <img src="images/instagram.svg" alt="Instagram" />
+        <img src="images/facebook.svg" alt="Facebook" />
+        <img src="images/twitter.svg" alt="Twitter" />
+      </div>
+    </footer>
+  </body>
+</html>
