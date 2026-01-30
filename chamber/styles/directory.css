@@ -26,6 +26,7 @@ main {
 .site-header {
   background-color: var(--green-dark);
   border-bottom: 6px solid var(--gold);
+  position: relative; /* 🔥 CLAVE PARA MENÚ MÓVIL */
 }
 
 .header-content {
@@ -134,7 +135,7 @@ main {
   margin-bottom: 10px;
 }
 
-/* FORECAST BOX */
+/* FORECAST */
 .forecast-box {
   margin-top: 2rem;
   background: white;
@@ -225,6 +226,7 @@ footer {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    cursor: pointer;
   }
 
   .nav {
@@ -232,8 +234,9 @@ footer {
     position: absolute;
     width: 100%;
     background: var(--green-dark);
-    top: 80px;
+    top: 100%;
     left: 0;
+    z-index: 1000;
   }
 
   .nav.open {
@@ -243,7 +246,13 @@ footer {
   .nav ul {
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    gap: 0;
+  }
+
+  .nav li {
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
   }
 
   .medium,
