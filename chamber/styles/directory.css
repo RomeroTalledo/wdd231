@@ -10,7 +10,6 @@
   box-sizing: border-box;
 }
 
-/* ===== BODY LAYOUT ===== */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bg-light);
@@ -23,7 +22,7 @@ main {
   flex: 1;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .site-header {
   background-color: var(--green-dark);
   border-bottom: 6px solid var(--gold);
@@ -36,7 +35,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .logo {
@@ -51,7 +49,7 @@ main {
   width: 50px;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 .nav ul {
   list-style: none;
   display: flex;
@@ -64,23 +62,61 @@ main {
   font-weight: bold;
 }
 
+.nav a.active {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
 .hamburger {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   color: white;
-  cursor: pointer;
 }
 
-/* ===== MAIN ===== */
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-cta {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gold);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* MAIN */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 2rem 1rem;
 }
 
-/* ===== DASHBOARD ===== */
 .medium {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -98,22 +134,28 @@ main {
   margin-bottom: 10px;
 }
 
-/* ===== WELCOME IMAGE PLACEHOLDER ===== */
-.welcome-image {
-  width: 100%;
-  height: 160px;
-  background-color: #ddd;
+/* FORECAST BOX */
+.forecast-box {
+  margin-top: 2rem;
+  background: white;
+  padding: 1.5rem;
   border-radius: 6px;
-  margin-bottom: 12px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 0.9rem;
 }
 
-/* ===== CAROUSEL ===== */
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.forecast-day {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* CAROUSEL */
 .carousel-section {
   margin-top: 3rem;
   background: white;
@@ -124,7 +166,6 @@ main {
 .carousel-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .carousel-viewport {
@@ -134,70 +175,38 @@ main {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.6s ease;
+  width: 100%;
+  gap: 1rem;
 }
 
-/* Card wrapper (fixed size) */
 .carousel-card {
   flex: 0 0 33.3333%;
   padding: 1rem;
 }
 
-/* Card content */
 .carousel-card-inner {
   background: #f5f5f5;
   padding: 1rem;
   border-radius: 6px;
   text-align: center;
-  min-height: 280px;
-  animation: fadeUp 0.5s ease;
 }
 
-/* Image placeholder */
 .carousel-card img {
   width: 100%;
   height: 100px;
   object-fit: contain;
-  background: #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
 }
 
-.carousel-card h3 {
-  margin: 8px 0;
-}
-
-.carousel-card a {
-  display: inline-block;
-  margin-top: 8px;
-  font-weight: bold;
-  color: var(--green-dark);
-}
-
-/* Buttons */
 .carousel-btn {
   background: var(--green-dark);
   color: white;
   border: none;
   font-size: 1.5rem;
   padding: 8px 12px;
-  cursor: pointer;
   border-radius: 50%;
 }
 
-/* Animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
   background: var(--green-dark);
   border-top: 6px solid var(--gold);
@@ -205,7 +214,6 @@ footer {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .social img {
@@ -213,7 +221,7 @@ footer {
   margin-left: 10px;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -222,10 +230,10 @@ footer {
   .nav {
     display: none;
     position: absolute;
-    top: 90px;
-    left: 0;
     width: 100%;
     background: var(--green-dark);
+    top: 80px;
+    left: 0;
   }
 
   .nav.open {
@@ -235,10 +243,11 @@ footer {
   .nav ul {
     flex-direction: column;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
   }
 
-  .medium {
+  .medium,
+  .forecast-grid {
     grid-template-columns: 1fr;
   }
 
