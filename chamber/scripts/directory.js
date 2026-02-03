@@ -1,69 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const hamBtn = document.getElementById("ham-btn");
-  const navMenu = document.getElementById("nav-menu");
-  const cards = document.getElementById("cards");
-  const gridBtn = document.getElementById("gridBtn");
-  const listBtn = document.getElementById("listBtn");
+const gallery = document.querySelector('#members-gallery');
 
-  hamBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-    hamBtn.classList.toggle("active");
-  });
+fetch('data/members.json')
+  .then(response => response.json())
+  .then(data => {
+    data.members.forEach(member => {
+      const card = document.createElement('article');
+      card.classList.add('member-card');
 
-  document.querySelector("#currentyear").textContent = new Date().getFullYear();
-  document.querySelector("#lastModified").textContent =
-    "Last Modified: " + document.lastModified;
+      card.innerHTML = `
+        <div class="image-box">
+          <img src="images/${member.image}" alt="${member.name}" loading="lazy">
+        </div>
+        <h2>${member.name}</h2>
+        <p class="level">${member.membershipLevel} Member</p>
+        <p>${member.description}</p>
+        <p><strong>Address:</strong> ${member.address}</p>
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+      `;
 
-  const url = "data/members.json";
-
-  async function getMemberData() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data.members);
-    cards.classList.remove("loading");
-  }
-
-  function displayMembers(members) {
-    cards.innerHTML = "";
-    members.forEach((member) => {
-      const card = document.createElement("section");
-      card.classList.add("member-card");
-
-      const name = document.createElement("h2");
-      const image = document.createElement("img");
-      const description = document.createElement("p");
-      const address = document.createElement("p");
-      const phone = document.createElement("p");
-      const level = document.createElement("p");
-      const website = document.createElement("a");
-
-      name.textContent = member.name;
-      description.textContent = member.description;
-      address.textContent = `📍 ${member.address}`;
-      phone.textContent = `📞 ${member.phone}`;
-      level.textContent = `🏅 ${member.membershipLevel}`;
-      website.href = member.website;
-      website.textContent = "Visit Website";
-      website.target = "_blank";
-
-      image.src = `images/${member.image}`;
-      image.alt = `${member.name} logo`;
-      image.loading = "lazy";
-
-      card.append(name, image, description, address, phone, level, website);
-      cards.appendChild(card);
+      gallery.appendChild(card);
     });
-  }
-
-  gridBtn.addEventListener("click", () => {
-    cards.classList.add("grid-view");
-    cards.classList.remove("list-view");
+  })
+  .catch(error => {
+    gallery.innerHTML = '<p>Error loading members.</p>';
+    console.error(error);
   });
-
-  listBtn.addEventListener("click", () => {
-    cards.classList.add("list-view");
-    cards.classList.remove("grid-view");
-  });
-
-  getMemberData();
-});

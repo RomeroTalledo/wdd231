@@ -62,6 +62,24 @@
       "image": "fitnesspro.webp",
       "membershipLevel": "Bronze",
       "description": "Modern gym with certified trainers and personalized plans."
+    },
+    {
+      "name": "Pacific Dental Care",
+      "address": "410 Smile Avenue, Lima, Peru",
+      "phone": "+51 955 741 369",
+      "website": "https://pacificdental.pe",
+      "image": "pacificdental.webp",
+      "membershipLevel": "Silver",
+      "description": "Dental clinic offering preventive, cosmetic, and orthodontic services with modern technology."
+    },
+    {
+      "name": "Mar Azul Restaurant",
+      "address": "78 Ocean Drive, Callao, Peru",
+      "phone": "+51 989 632 147",
+      "website": "https://marazulrestaurant.pe",
+      "image": "marazul.webp",
+      "membershipLevel": "Gold",
+      "description": "Seafood restaurant known for fresh dishes inspired by Peruvian coastal cuisine."
     }
   ]
 }
