@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chamber of Commerce - La Perla</title>
+    <title>Discover - Chamber of Commerce La Perla</title>
 
     <meta
       name="description"
-      content="La Perla Chamber of Commerce supports local businesses, events, and community growth."
+      content="Discover places of interest in La Perla."
     />
     <meta name="author" content="Dallin Romero Talledo" />
 
@@ -15,8 +15,8 @@
     <link rel="icon" href="images/icon.png" />
 
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/lastvisit.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
     <script src="scripts/lastmodified.js" defer></script>
   </head>
 
@@ -34,19 +34,27 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-             <li><a href="discover.html">Discover</a></li>
+            <li><a href="discover.html">Discover</a></li>
             <li><a href="join.html">Join</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="container3">
-      <h1>Business Directory</h1>
+    <section class="hero">
+      <img
+        src="images/la-perla.jpg"
+        alt="View of La Perla district"
+        class="hero-img"
+        loading="lazy"
+      />
+      <div class="hero-content">
+        <h1>Discover La Perla</h1>
+      </div>
+    </section>
 
-      <section id="members-gallery" class="gallery">
-        <!-- Cards generadas por JS -->
-      </section>
+    <main class="discover-container">
+      <div id="cards-container"></div>
     </main>
 
     <footer>
@@ -61,9 +69,9 @@
         <img src="images/twitter.svg" alt="Twitter" />
       </div>
     </footer>
+    <script type="module" src="scripts/discover.js"></script>
     <script src="scripts/members.js"></script>
     <script src="scripts/join.js"></script>
-     <li><a href="discover.html" class="active">Discover</a></li>
     <script src="scripts/directory.js"></script>
   </body>
 </html>
