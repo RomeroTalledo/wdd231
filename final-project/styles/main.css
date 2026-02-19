@@ -184,7 +184,6 @@ main {
   }
 }
 
-
 /* ================= CARRUSEL ================= */
 
 .titulo-carrusel {
@@ -260,7 +259,6 @@ footer div:first-child {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
-
   /* GRID A 1 COLUMNA */
   .medium {
     grid-template-columns: 1fr;
@@ -299,7 +297,6 @@ footer div:first-child {
   .nav.open {
     max-height: 400px;
   }
-
 }
 
 .hero-cta {
@@ -372,13 +369,13 @@ footer div:first-child {
   position: fixed;
   z-index: 1000;
   inset: 0;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
-  background: var(--DarkGray);   /* New color */
+  background: var(--DarkGray); /* New color */
   color: white;
   padding: 2rem;
   width: 90%;
@@ -387,7 +384,7 @@ footer div:first-child {
   text-align: left;
   position: relative;
   animation: aparecer 0.3s ease;
-  border: 2px solid #415a77;  /* Optional border */
+  border: 2px solid #415a77; /* Optional border */
 }
 
 .modal-content img {
@@ -414,6 +411,132 @@ footer div:first-child {
 }
 
 @keyframes aparecer {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= APPOINTMENT SECTION ================= */
+
+.container-3 {
+  background: linear-gradient(135deg, #111, #1c1c1c);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.container-3 h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Layout */
+.appointment-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+/* ================= FORM ================= */
+
+.appointment-container form {
+  background: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.appointment-container label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: bold;
+  gap: 0.4rem;
+}
+
+.appointment-container input,
+.appointment-container select,
+.appointment-container textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.appointment-container input:focus,
+.appointment-container select:focus,
+.appointment-container textarea:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
+}
+
+/* Submit Button */
+.appointment-container input[type="submit"] {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #00bcd4, #007c91);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.appointment-container input[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+}
+
+/* ================= INFO CARDS ================= */
+
+.support-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.support-info-cards .card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.support-info-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.2);
+}
+
+.support-info-cards h2 {
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+}
+
+.support-info-cards p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .appointment-container {
+    grid-template-columns: 1fr;
+  }
 }

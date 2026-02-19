@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cyber Knight</title>
+<title>Cyber Knight | Contact</title>
 
 <link rel="stylesheet" href="styles/main.css">
 <link rel="icon" href="images/icon-2.png">
@@ -18,17 +18,16 @@
   <div class="header-content">
     <div class="logo">
       <img src="images/icon.png" alt="Cyber Knight logo">
-      <h2>Cyber Knight</h2>
+      <h2>Cyber Knight - IT Solutions</h2>
     </div>
 
     <button id="ham-btn" class="hamburger">&#9776;</button>
 
     <nav id="nav-menu" class="nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Guides</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -36,10 +35,86 @@
 
 
 
-<main class="container-1">
+<main class="container-3">
+  <h1>Schedule a Technical Support Appointment</h1>
 
-  
+  <section class="appointment-container">
+    <form method="get" action="thankyou.html">
+
+      <label>
+        First Name
+        <input type="text" name="fname" required autocomplete="given-name" />
+      </label>
+
+      <label>
+        Last Name
+        <input type="text" name="lname" required autocomplete="family-name" />
+      </label>
+
+      <label>
+        Email Address
+        <input type="email" name="email" required autocomplete="email"
+          placeholder="example@email.com" />
+      </label>
+
+      <label>
+        Phone Number
+        <input type="tel" name="phone" required autocomplete="tel" />
+      </label>
+
+      <label>
+        Type of Support Needed
+        <select name="support-type" required>
+          <option value="">Select an option</option>
+          <option value="hardware">Hardware Issue</option>
+          <option value="software">Software Issue</option>
+          <option value="network">Network / Internet Issue</option>
+          <option value="virus">Virus / Security Issue</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+
+      <label>
+        Preferred Appointment Date
+        <input type="date" name="appointment-date" required />
+      </label>
+
+      <label>
+        Preferred Time
+        <input type="time" name="appointment-time" required />
+      </label>
+
+      <label>
+        Describe Your Issue
+        <textarea name="description" rows="4"
+          placeholder="Please describe the problem you are experiencing..." required></textarea>
+      </label>
+
+      <input type="hidden" id="timestamp" name="timestamp" />
+
+      <input type="submit" value="Book Appointment" />
+
+    </form>
+
+    <section class="support-info-cards">
+      <div class="card">
+        <h2>On-Site Support</h2>
+        <p>We visit your location to diagnose and fix the issue.</p>
+      </div>
+
+      <div class="card">
+        <h2>Remote Assistance</h2>
+        <p>Secure remote connection to solve your problem quickly.</p>
+      </div>
+
+      <div class="card">
+        <h2>Emergency Support</h2>
+        <p>Priority assistance for urgent technical problems.</p>
+      </div>
+    </section>
+  </section>
 </main>
+
 
 
 <footer>

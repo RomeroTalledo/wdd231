@@ -1,77 +1,68 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cyber Knight | Guides</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Knight | Guides</title>
 
-<link rel="stylesheet" href="styles/main.css">
-<link rel="icon" href="images/icon-2.png">
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="images/icon-2.png" />
 
-<script src="scripts/carrusel.js" defer></script>
-<script src="scripts/menu.js"></script>
+    <script src="scripts/carrusel.js" defer></script>
+    <script src="scripts/menu.js"></script>
+  </head>
 
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo">
+          <img src="images/icon.png" alt="Cyber Knight logo" />
+          <h2>Cyber Knight - IT Solutions</h2>
+        </div>
 
-</head>
+        <button id="ham-btn" class="hamburger">&#9776;</button>
 
-<body>
+        <nav id="nav-menu" class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<header class="site-header">
-  <div class="header-content">
-    <div class="logo">
-      <img src="images/icon.png" alt="Cyber Knight logo">
-      <h2>Cyber Knight - IT Solutions</h2>
+    <main class="contenedor-2">
+      <h2 class="titulo-problemas">Common Problems</h2>
+
+      <div id="grid-problemas" class="grid-problemas">
+        <!-- Aquí se cargarán dinámicamente los problemas desde guides.json -->
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="cerrar">&times;</span>
+        <img id="modal-img" src="" alt="" />
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <ul id="modal-steps"></ul>
+      </div>
     </div>
 
-    <button id="ham-btn" class="hamburger">&#9776;</button>
+    <footer>
+      <div>
+        <p>© 2026 Dallin Romero Talledo</p>
+        <p id="lastModified"></p>
+      </div>
 
-    <nav id="nav-menu" class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Guides</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-
-<main class="contenedor-2">
-
-  <h2 class="titulo-problemas">Problemas Comunes</h2>
-
-  <div id="grid-problemas" class="grid-problemas">
-    <!-- Aquí se cargarán dinámicamente los problemas desde guides.json -->
-  </div>
-
-</main>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="cerrar">&times;</span>
-    <img id="modal-img" src="" alt="">
-    <h3 id="modal-title"></h3>
-    <p id="modal-description"></p>
-    <ul id="modal-steps"></ul>
-  </div>
-</div>
-
-
-<footer>
-  <div>
-    <p>© 2026 Dallin Romero Talledo</p>
-    <p id="lastModified"></p>
-  </div>
-
-  <div class="social">
+      <div class="social">
         <img src="images/instagram.svg" alt="Instagram" />
         <img src="images/facebook.svg" alt="Facebook" />
         <img src="images/twitter.svg" alt="Twitter" />
       </div>
-</footer>
-<script type="module" src="scripts/guides.js"></script>
-</body>
+    </footer>
+    <script type="module" src="scripts/guides.js"></script>
+  </body>
 </html>

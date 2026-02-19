@@ -2,7 +2,7 @@ import { guides } from "../data/guides.mjs";
 
 const grid = document.getElementById("grid-problemas");
 
-guides.forEach(guide => {
+guides.forEach((guide) => {
   const card = document.createElement("div");
   card.classList.add("problema-card");
 
@@ -23,7 +23,7 @@ function openModal(guide) {
   const stepsList = document.getElementById("modal-steps");
   stepsList.innerHTML = "";
 
-  guide.steps.forEach(step => {
+  guide.steps.forEach((step) => {
     const li = document.createElement("li");
     li.textContent = step;
     stepsList.appendChild(li);
