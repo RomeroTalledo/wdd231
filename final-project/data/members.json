@@ -1,0 +1,85 @@
+{
+  "members": [
+    {
+      "name": "La Perla Store",
+      "address": "123 Main Avenue, Lima, Peru",
+      "phone": "+51 987 654 321",
+      "website": "https://laperla.com.pe",
+      "image": "laperla.webp",
+      "membershipLevel": "Gold",
+      "description": "Local store specialized in handcrafted products and gifts."
+    },
+    {
+      "name": "TechNova Solutions",
+      "address": "456 Innovation Street, Lima, Peru",
+      "phone": "+51 912 345 678",
+      "website": "https://technova.pe",
+      "image": "technova.webp",
+      "membershipLevel": "Silver",
+      "description": "Technology solutions company for small and medium-sized businesses."
+    },
+    {
+      "name": "Green Life Market",
+      "address": "789 Nature Road, Lima, Peru",
+      "phone": "+51 934 567 890",
+      "website": "https://greenlife.pe",
+      "image": "greenlife.webp",
+      "membershipLevel": "Bronze",
+      "description": "Eco-friendly market offering organic and healthy products."
+    },
+    {
+      "name": "Andina Construction",
+      "address": "321 Andes Avenue, Lima, Peru",
+      "phone": "+51 901 234 567",
+      "website": "https://andina.com.pe",
+      "image": "andina.webp",
+      "membershipLevel": "Gold",
+      "description": "Company dedicated to construction projects and urban development."
+    },
+    {
+      "name": "Aroma Café",
+      "address": "15 Central Plaza, Lima, Peru",
+      "phone": "+51 956 321 654",
+      "website": "https://cafearoma.pe",
+      "image": "cafearoma.webp",
+      "membershipLevel": "Silver",
+      "description": "Artisan coffee shop featuring 100% Peruvian coffee beans."
+    },
+    {
+      "name": "Inka Travels",
+      "address": "852 Tourism Avenue, Cusco, Peru",
+      "phone": "+51 945 852 963",
+      "website": "https://viajesinka.pe",
+      "image": "viajesinka.webp",
+      "membershipLevel": "Gold",
+      "description": "Travel agency specialized in cultural and adventure tourism."
+    },
+    {
+      "name": "Fitness Pro Gym",
+      "address": "222 Health Street, Lima, Peru",
+      "phone": "+51 978 456 123",
+      "website": "https://fitnesspro.pe",
+      "image": "fitnesspro.webp",
+      "membershipLevel": "Bronze",
+      "description": "Modern gym with certified trainers and personalized plans."
+    },
+    {
+      "name": "Pacific Dental Care",
+      "address": "410 Smile Avenue, Lima, Peru",
+      "phone": "+51 955 741 369",
+      "website": "https://pacificdental.pe",
+      "image": "pacificdental.webp",
+      "membershipLevel": "Silver",
+      "description": "Dental clinic offering preventive, cosmetic, and orthodontic services with modern technology."
+    },
+    {
+      "name": "Mar Azul Restaurant",
+      "address": "78 Ocean Drive, Callao, Peru",
+      "phone": "+51 989 632 147",
+      "website": "https://marazulrestaurant.pe",
+      "image": "marazul.webp",
+      "membershipLevel": "Gold",
+      "description": "Seafood restaurant known for fresh dishes inspired by Peruvian coastal cuisine."
+    }
+  ]
+}
