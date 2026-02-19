@@ -7,53 +7,89 @@
   <title>Cyber Knight | Contact</title>
 
   <!-- SEO Básico -->
-  <meta name="description" content="Cyber Knight IT Solutions provides secure, scalable, and reliable IT services including managed support, cybersecurity, cloud solutions, and custom hardware upgrades." />
-  <meta name="author" content="Cyber Knight IT Solutions" />
-  <meta name="keywords" content="IT support, cybersecurity, network setup, cloud solutions, managed IT services, custom PC builds" />
+  <meta
+    name="description"
+    content="Schedule professional IT support including hardware repair, cybersecurity assistance, network troubleshooting, and remote technical services."
+  />
+  <meta name="author" content="Dallin Romero" />
+  <meta
+    name="keywords"
+    content="IT support appointment, technical support booking, cybersecurity help, hardware repair, network troubleshooting"
+  />
 
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-  <meta property="og:title" content="Cyber Knight | Professional IT Solutions" />
-  <meta property="og:description" content="Secure, scalable, and efficient IT solutions for businesses and individuals. Cybersecurity, cloud services, managed IT support, and more." />
-  <meta property="og:image" content="http://127.0.0.1:5500/final-project/images/icon.png" />
-  <meta property="og:url" content="https://tudominio.com" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cyber Knight | Schedule IT Support" />
+  <meta
+    property="og:description"
+    content="Book a professional IT support appointment for hardware, software, network, or cybersecurity assistance."
+  />
+  <meta
+    property="og:image"
+    content="https://romerotalledo.github.io/wdd231/final-project/images/icon.png"
+  />
+  <meta
+    property="og:url"
+    content="https://romerotalledo.github.io/wdd231/final-project/contact.html"
+  />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cyber Knight | Professional IT Solutions" />
-  <meta name="twitter:description" content="Secure and scalable IT services. Managed support, cybersecurity, cloud solutions, and hardware upgrades." />
-  <meta name="twitter:image" content="https://tudominio.com/images/preview.jpg" />
+  <meta
+    name="twitter:title"
+    content="Cyber Knight | Schedule IT Support"
+  />
+  <meta
+    name="twitter:description"
+    content="Book a professional IT support appointment for hardware, software, network, or cybersecurity assistance."
+  />
+  <meta
+    name="twitter:image"
+    content="https://romerotalledo.github.io/wdd231/final-project/images/icon.png"
+  />
 
+  <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/main.css" />
-  <link rel="icon" href="images/icon-2.png" />
+
+  <link rel="icon" href="images/icon-2.png" type="image/png" />
 
   <script src="scripts/carrusel.js" defer></script>
   <script src="scripts/menu.js" defer></script>
 </head>
-
 
 <body>
 
 <header class="site-header">
   <div class="header-content">
     <div class="logo">
-      <img src="images/icon.png" alt="Cyber Knight logo">
+      <img
+        src="images/icon.png"
+        alt="Cyber Knight IT Solutions company logo"
+        width="48"
+        height="48"
+      />
       <h2>Cyber Knight - IT Solutions</h2>
     </div>
 
-    <button id="ham-btn" class="hamburger">&#9776;</button>
+    <button
+      id="ham-btn"
+      class="hamburger"
+      aria-label="Open navigation menu"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+    >
+      &#9776;
+    </button>
 
     <nav id="nav-menu" class="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-            <li><a href="guides.html">Guides</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-
 
 <main class="container-3">
   <h1>Schedule a Technical Support Appointment</h1>
@@ -61,59 +97,53 @@
   <section class="appointment-container">
     <form method="get" action="thankyou.html">
 
-      <label>
-        First Name
-        <input type="text" name="fname" required autocomplete="given-name" />
-      </label>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" required autocomplete="given-name" />
 
-      <label>
-        Last Name
-        <input type="text" name="lname" required autocomplete="family-name" />
-      </label>
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" required autocomplete="family-name" />
 
-      <label>
-        Email Address
-        <input type="email" name="email" required autocomplete="email"
-          placeholder="example@email.com" />
-      </label>
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        autocomplete="email"
+        placeholder="example@email.com"
+      />
 
-      <label>
-        Phone Number
-        <input type="tel" name="phone" required autocomplete="tel" />
-      </label>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required autocomplete="tel" />
 
-      <label>
-        Type of Support Needed
-        <select name="support-type" required>
-          <option value="">Select an option</option>
-          <option value="hardware">Hardware Issue</option>
-          <option value="software">Software Issue</option>
-          <option value="network">Network / Internet Issue</option>
-          <option value="virus">Virus / Security Issue</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
+      <label for="support-type">Type of Support Needed</label>
+      <select id="support-type" name="support-type" required>
+        <option value="">Select an option</option>
+        <option value="hardware">Hardware Issue</option>
+        <option value="software">Software Issue</option>
+        <option value="network">Network / Internet Issue</option>
+        <option value="virus">Virus / Security Issue</option>
+        <option value="other">Other</option>
+      </select>
 
-      <label>
-        Preferred Appointment Date
-        <input type="date" name="appointment-date" required />
-      </label>
+      <label for="appointment-date">Preferred Appointment Date</label>
+      <input type="date" id="appointment-date" name="appointment-date" required />
 
-      <label>
-        Preferred Time
-        <input type="time" name="appointment-time" required />
-      </label>
+      <label for="appointment-time">Preferred Time</label>
+      <input type="time" id="appointment-time" name="appointment-time" required />
 
-      <label>
-        Describe Your Issue
-        <textarea name="description" rows="4"
-          placeholder="Please describe the problem you are experiencing..." required></textarea>
-      </label>
+      <label for="description">Describe Your Issue</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+        placeholder="Please describe the problem you are experiencing..."
+        required
+      ></textarea>
 
       <input type="hidden" id="timestamp" name="timestamp" />
 
       <input type="submit" value="Book Appointment" />
-
     </form>
 
     <section class="support-info-cards">
@@ -135,8 +165,6 @@
   </section>
 </main>
 
-
-
 <footer>
   <div>
     <p>© 2026 Dallin Romero Talledo</p>
@@ -144,10 +172,25 @@
   </div>
 
   <div class="social">
-        <img src="images/instagram.svg" alt="Instagram" />
-        <img src="images/facebook.svg" alt="Facebook" />
-        <img src="images/twitter.svg" alt="Twitter" />
-      </div>
+    <img
+      src="images/instagram.svg"
+      alt="Visit our Instagram page"
+      width="24"
+      height="24"
+    />
+    <img
+      src="images/facebook.svg"
+      alt="Visit our Facebook page"
+      width="24"
+      height="24"
+    />
+    <img
+      src="images/twitter.svg"
+      alt="Visit our Twitter page"
+      width="24"
+      height="24"
+    />
+  </div>
 </footer>
 
 </body>

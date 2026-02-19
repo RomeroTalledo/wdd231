@@ -1,0 +1,133 @@
+:root {
+  --black: #131719;
+  --DarkGray: #2e2e2e;
+  --LightGray: #f4f4f4;
+  --White: #ffffff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--LightGray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ================= HEADER ================= */
+
+.site-header {
+  background-color: var(--black);
+  border-bottom: 6px solid var(--DarkGray);
+  position: relative;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.logo img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* BOTÓN HAMBURGUESA */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: var(--black);
+  border-top: 6px solid var(--DarkGray);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div:first-child {
+  text-align: left;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+
+.social img {
+  width: 28px;
+}
+
+/* ================= RESPONSIVE GLOBAL ================= */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--black);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+    gap: 20px;
+  }
+
+  .nav.open {
+    max-height: 400px;
+  }
+}

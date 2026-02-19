@@ -1,51 +1,89 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Cyber Knight | Guides</title>
+    <title>Cyber Knight | Guides</title>
 
-  <!-- SEO Básico -->
-  <meta name="description" content="Cyber Knight IT Solutions provides secure, scalable, and reliable IT services including managed support, cybersecurity, cloud solutions, and custom hardware upgrades." />
-  <meta name="author" content="Cyber Knight IT Solutions" />
-  <meta name="keywords" content="IT support, cybersecurity, network setup, cloud solutions, managed IT services, custom PC builds" />
+    <!-- SEO Básico -->
+    <meta
+      name="description"
+      content="Step-by-step IT troubleshooting guides for common technical problems including network issues, hardware errors, and system security."
+    />
+    <meta name="author" content="Dallin Romero" />
+    <meta
+      name="keywords"
+      content="IT troubleshooting, tech guides, cybersecurity tips, hardware problems, network issues, computer repair"
+    />
 
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-  <meta property="og:title" content="Cyber Knight | Professional IT Solutions" />
-  <meta property="og:description" content="Secure, scalable, and efficient IT solutions for businesses and individuals. Cybersecurity, cloud services, managed IT support, and more." />
-  <meta property="og:image" content="https://tudominio.com/images/preview.jpg" />
-  <meta property="og:url" content="https://tudominio.com" />
-  <meta property="og:type" content="website" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cyber Knight | IT Troubleshooting Guides" />
+    <meta
+      property="og:description"
+      content="Professional step-by-step guides to solve common IT problems quickly and securely."
+    />
+    <meta
+      property="og:image"
+      content="https://romerotalledo.github.io/wdd231/final-project/images/icon.png"
+    />
+    <meta
+      property="og:url"
+      content="https://romerotalledo.github.io/wdd231/final-project/guides.html"
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cyber Knight | Professional IT Solutions" />
-  <meta name="twitter:description" content="Secure and scalable IT services. Managed support, cybersecurity, cloud solutions, and hardware upgrades." />
-  <meta name="twitter:image" content="https://tudominio.com/images/preview.jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Cyber Knight | IT Troubleshooting Guides"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional step-by-step guides to solve common IT problems quickly and securely."
+    />
+    <meta
+      name="twitter:image"
+      content="https://romerotalledo.github.io/wdd231/final-project/images/icon.png"
+    />
 
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="icon" href="images/icon-2.png" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 
-  <script src="scripts/carrusel.js" defer></script>
-  <script src="scripts/menu.js" defer></script>
-</head>
+    <link rel="icon" href="images/icon-2.png" type="image/png" />
 
+    <script src="scripts/carrusel.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+  </head>
 
   <body>
     <header class="site-header">
       <div class="header-content">
         <div class="logo">
-          <img src="images/icon.png" alt="Cyber Knight logo" />
+          <img
+            src="images/icon.png"
+            alt="Cyber Knight IT Solutions company logo"
+            width="48"
+            height="48"
+          />
           <h2>Cyber Knight - IT Solutions</h2>
         </div>
 
-        <button id="ham-btn" class="hamburger">&#9776;</button>
+        <button
+          id="ham-btn"
+          class="hamburger"
+          aria-label="Open navigation menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
 
         <nav id="nav-menu" class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="guides.html">Guides</a></li>
+            <li><a href="guides.html" aria-current="page">Guides</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -56,15 +94,20 @@
       <h2 class="titulo-problemas">Common Problems</h2>
 
       <div id="grid-problemas" class="grid-problemas">
-        <!-- Aquí se cargarán dinámicamente los problemas desde guides.json -->
+        <!-- Dynamic content loaded from guides.json -->
       </div>
     </main>
 
     <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="cerrar">&times;</span>
-        <img id="modal-img" src="" alt="" />
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="cerrar" aria-label="Close modal">&times;</button>
+        <img
+          id="modal-img"
+          src=""
+          alt="Detailed illustration of the selected technical issue"
+          loading="lazy"
+        />
         <h3 id="modal-title"></h3>
         <p id="modal-description"></p>
         <ul id="modal-steps"></ul>
@@ -78,11 +121,27 @@
       </div>
 
       <div class="social">
-        <img src="images/instagram.svg" alt="Instagram" />
-        <img src="images/facebook.svg" alt="Facebook" />
-        <img src="images/twitter.svg" alt="Twitter" />
+        <img
+          src="images/instagram.svg"
+          alt="Visit our Instagram page"
+          width="24"
+          height="24"
+        />
+        <img
+          src="images/facebook.svg"
+          alt="Visit our Facebook page"
+          width="24"
+          height="24"
+        />
+        <img
+          src="images/twitter.svg"
+          alt="Visit our Twitter page"
+          width="24"
+          height="24"
+        />
       </div>
     </footer>
+
     <script type="module" src="scripts/guides.js"></script>
   </body>
 </html>

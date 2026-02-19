@@ -1,81 +1,3 @@
-:root {
-  --black: #131719;
-  --DarkGray: #2e2e2e;
-  --LightGray: #f4f4f4;
-  --White: #ffffff;
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--LightGray);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-/* ================= HEADER ================= */
-
-.site-header {
-  background-color: var(--black);
-  border-bottom: 6px solid var(--DarkGray);
-  position: relative;
-  z-index: 1000;
-}
-
-.header-content {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: white;
-}
-
-.logo img {
-  width: 45px;
-  border-radius: 50%;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* BOTÓN HAMBURGUESA */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
 /* ================= HERO ================= */
 
 .hero {
@@ -104,7 +26,29 @@ main {
   padding: 0 1rem;
 }
 
-/* ================= MAIN ================= */
+.hero-cta {
+  margin-top: 1rem;
+  padding: 0.9rem 1.8rem;
+  background-color: var(--black);
+  color: var(--White);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: var(--DarkGray);
+  transform: translateY(-2px);
+}
+
+.hero-cta:visited {
+  color: var(--White);
+}
+
+/* ================= CONTAINER 1 ================= */
+
 .container-1 {
   max-width: 1200px;
   margin: auto;
@@ -126,62 +70,6 @@ main {
 .full-width {
   grid-column: 1 / -1;
   margin-top: 40px;
-}
-
-.titulo-carrusel {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.carrusel {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.contenedor {
-  overflow: hidden;
-  width: 100%;
-}
-
-.track {
-  display: flex;
-  transition: transform 0.4s ease;
-}
-
-.item {
-  flex: 0 0 33.3333%;
-  padding: 10px;
-  text-align: center;
-}
-
-.item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.flecha {
-  background: black;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-  .medium {
-    grid-template-columns: 1fr;
-  }
-
-  .item {
-    flex: 0 0 100%;
-  }
 }
 
 /* ================= CARRUSEL ================= */
@@ -231,96 +119,18 @@ main {
   border-radius: 50%;
 }
 
-/* ================= FOOTER ================= */
-
-footer {
-  background: var(--black);
-  border-top: 6px solid var(--DarkGray);
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer div:first-child {
-  text-align: left;
-}
-
-.social {
-  display: flex;
-  gap: 15px;
-}
-
-.social img {
-  width: 28px;
-}
-
-/* ================= RESPONSIVE ================= */
-
 @media (max-width: 768px) {
-  /* GRID A 1 COLUMNA */
   .medium {
     grid-template-columns: 1fr;
   }
 
-  /* CARRUSEL 1 IMAGEN */
   .item {
     min-width: 100%;
   }
-
-  /* MOSTRAR HAMBURGUESA */
-  .hamburger {
-    display: block;
-  }
-
-  /* OCULTAR MENÚ POR DEFECTO */
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--black);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
-    gap: 20px;
-  }
-
-  /* CUANDO SE ABRE */
-  .nav.open {
-    max-height: 400px;
-  }
 }
 
-.hero-cta {
-  margin-top: 1rem;
-  padding: 0.9rem 1.8rem;
-  background-color: var(--black);
-  color: var(--White);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
+/* ================= CONTENEDOR 2 ================= */
 
-.hero-cta:hover {
-  background-color: var(--DarkGray);
-  transform: translateY(-2px);
-}
-
-.hero-cta:visited {
-  color: var(--White);
-}
-
-/* CONTENEDOR 2 */
 .contenedor-2 {
   padding: 4rem 2rem;
   background-color: #111;
@@ -333,7 +143,6 @@ footer div:first-child {
   margin-bottom: 2rem;
 }
 
-/* GRID */
 .grid-problemas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -364,6 +173,7 @@ footer div:first-child {
 }
 
 /* MODAL */
+
 .modal {
   display: none;
   position: fixed;
@@ -375,7 +185,7 @@ footer div:first-child {
 }
 
 .modal-content {
-  background: var(--DarkGray); /* New color */
+  background: var(--DarkGray);
   color: white;
   padding: 2rem;
   width: 90%;
@@ -384,7 +194,7 @@ footer div:first-child {
   text-align: left;
   position: relative;
   animation: aparecer 0.3s ease;
-  border: 2px solid #415a77; /* Optional border */
+  border: 2px solid #415a77;
 }
 
 .modal-content img {
@@ -421,7 +231,7 @@ footer div:first-child {
   }
 }
 
-/* ================= APPOINTMENT SECTION ================= */
+/* ================= CONTAINER 3 ================= */
 
 .container-3 {
   background: linear-gradient(135deg, #111, #1c1c1c);
@@ -436,7 +246,6 @@ footer div:first-child {
   letter-spacing: 1px;
 }
 
-/* Layout */
 .appointment-container {
   max-width: 1200px;
   margin: auto;
@@ -444,8 +253,6 @@ footer div:first-child {
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
 }
-
-/* ================= FORM ================= */
 
 .appointment-container form {
   background: #1a1a1a;
@@ -485,7 +292,6 @@ footer div:first-child {
   box-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
 }
 
-/* Submit Button */
 .appointment-container input[type="submit"] {
   margin-top: 1rem;
   background: linear-gradient(135deg, #00bcd4, #007c91);
@@ -501,8 +307,6 @@ footer div:first-child {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
 }
-
-/* ================= INFO CARDS ================= */
 
 .support-info-cards {
   display: flex;
@@ -532,8 +336,6 @@ footer div:first-child {
   font-size: 0.9rem;
   color: #ccc;
 }
-
-/* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
   .appointment-container {
